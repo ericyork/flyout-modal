@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Meta tags -->
+		<meta charset="utf-8"><!-- character set definition should appear within the first 500 bytes of your page -->
+		<meta name="author" content="Eric J. York"><!-- Lists author for search engines -->
+		<meta name="description" content="This page demonstrates a flyout menu and image modals"><!-- Provides description for search engines -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"><!-- sets viewport to device width and scale of 1, useful for responsive pages -->
+		<!-- Page title required in HTML5 -->
+		<title>Flyout Menu and Image Modal</title>
+		<!-- Loads Google Fonts via CDN -->
+		<link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Open+Sans:400i,800" rel="stylesheet">
+		<!-- Loads Document Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- Loads Font Awesome Stylesheet -->
+		<link rel="stylesheet" href="fa/css/font-awesome.min.css">
+	</head>
+	<body>
+		<nav id="main-navigation" class="navigation">
+			 <a href="#"><span class="x-mark">&#10006;</span></a>
+			 <h3>Navigation</h3>
+			 <ul class="">
+				 <li><a href="#">Excerpt One</a></li>
+				 <li><a href="#">Excerpt Two</a></li>
+				 <li><a href="#">Excerpt Three</a></li>
+			 </ul>
+		</nav>
+		<div class="icon-wrap">
+			<a href="#main-navigation"><span class="hamburger">&#9776;</span></a>
+		</div>
+		<header>
+			<h1>Book Sample</h1>
+		</header>
+		<h1 class="center"><span class="light">On the</span><br>GENEOLOGY <span class="light kern">of</span> MORALS</h1>
+		<h2><span>Friedrich Nietzsche</span></h2>
+		<p class="excerpt">At this point I can no longer avoid giving a first, provisional statement of my own hypothesis concerning the origin of the “bad conscience”: it may sound rather strange and needs to be pondered, lived with, and slept on for a long time. I regard the bad conscience as the serious illness that man was bound to contract under the stress of the most fundamental change he ever experienced—that change which occurred when he found himself finally enclosed within the walls of society and of peace. The situation that faced sea animals when they were compelled to become land animals or perish was the same as that which faced these semi-animals, well adapted to the wilderness, to war, to prowling, to adventure: suddenly all their instincts were disvalued and “suspended.” From now on they had to walk on their feet and “bear themselves” whereas hitherto they had been borne by the water: a dreadful heaviness lay upon them. They felt unable to cope with the simplest undertakings; in this new world they no longer possessed their former guides, their regulating, unconscious and infallible drives: they were reduced to thinking, inferring, reckoning, coordinating cause and effect, these unfortunate creatures; they were reduced to their “consciousness,” their weakest and most fallible organ! I believe there has never been such a feeling of misery on earth, such a leaden discomfort and at the same time the old instincts had not suddenly ceased to make their usual demands. Only it was hardly or rarely possible to humor them: as a rule they had to seek new and, as it were, subterranean gratifications.
+		</p>
+		<div class="images">
+			<img src="nietzsche.jpg" alt="portrait" onclick="onClick(this)" />
+			<img src="geneology.jpg" alt="portrait" onclick="onClick(this)" />
+		</div>
+		<div id="modal01" class="modal" onclick="this.style.display='none'">
+			<span class="closebtn container">&times;</span>
+			<div class="modal-content animate-zoom">
+				<img id="img01" style="width:100%">
+			</div>
+		</div>
+		<footer>
+			<p>&copy; Eric York 2016</p>
+		</footer>
+		<script><!-- brings up the image modal -->
+			function onClick(element) {
+			  document.getElementById("img01").src = element.src;
+			  document.getElementById("modal01").style.display = "block";
+			}
+		</script>
+  </body>
+</html>
